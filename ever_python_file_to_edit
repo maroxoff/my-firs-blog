@@ -1,0 +1,2 @@
+#Also consider adding the following future-import on top of every Python file you are going to edit to ensure Python 2 and 3 compatibility:
+from __future__ import unicode_literals
