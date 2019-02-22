@@ -1,0 +1,7 @@
+h1 a {
+    color: #4DA7F6;
+    font-family: 'Monaco';
+}
+body {
+    padding-left: 15px;
+}

@@ -30,7 +30,7 @@
 
 <html>
     <head>
-        <title>Sykoram-blog</title>
+        <title>sykorams-blog</title>
     </head>
     <body>
         <div>
@@ -39,14 +39,20 @@
 
         <div>
             <p>published: Vcera</p>
-            <h2><a href="">Můj první příspěvek</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h2><a href="">Moj prvy príspevok</a></h2>
+            <p>Tak si to tak skusam a skusam....</p>
         </div>
 
         <div>
             <p>published: Dnes</p>
-            <h2><a href="">Můj druhý příspěvek</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <h2><a href="">Moj druhý príspevok</a></h2>
+            <p>A tak si to tu teda skusam dokola, ze by som chytil nejaky zvyk a grif</p>
         </div>
     </body>
 </html>
+~/djangogirls/my-first-blog/blog/obrazky/marox.jpg
+~/djangogirls/my-first-blog/blog/obrazky/EXPLOITED-6.jpg
+
+me = User.objects.get(username='sykoram')
+Post.objects.create(author=me, title='druhy post', text='Tak si tu tak pisem a pisem... Toto pisem v comand lajne v django sehlly tak som zvedavi')
+Post.objects.create(author=me, title='treti post', text='Ono to fakt fachci aj z comand lajny.')
