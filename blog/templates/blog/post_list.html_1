@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>sykorams-blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Django Mans Blog</a></h1>
+        </div>
+
+        <div>
+            <p>published: Vcera</p>
+            <h2><a href="">Moj prvy príspevok</a></h2>
+            <p>Tak si to tak skusam a skusam....</p>
+        </div>
+
+        <div>
+            <p>published: Dnes</p>
+            <h2><a href="">Moj druhý príspevok</a></h2>
+            <p>A tak si to tu teda skusam dokola, ze by som chytil nejaky zvyk a grif</p>
+        </div>
+    </body>
+</html>

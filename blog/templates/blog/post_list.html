@@ -4,19 +4,16 @@
     </head>
     <body>
         <div>
-            <h1><a href="">Django Mans Blog</a></h1>
+            <h1><a href="/">Django Mans Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: Vcera</p>
-            <h2><a href="">Moj prvy príspevok</a></h2>
-            <p>Tak si to tak skusam a skusam....</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>published: Dnes</p>
-            <h2><a href="">Moj druhý príspevok</a></h2>
-            <p>A tak si to tu teda skusam dokola, ze by som chytil nejaky zvyk a grif</p>
-        </div>
     </body>
 </html>
