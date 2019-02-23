@@ -1,58 +1,23 @@
-#<h1>Hlavní nadpis</h1> - Pro tvůj nejdůležitější nadpis
-#<h2>Pod-nadpis</h2> pro nadpis na nižší úrovni
-#<h3>Pod-pod-nadpis</h3> ... a tak dále, až k <h6>
-#<em>text</em> zvýrazňuje tvůj text
-#<strong>text</strong> zvýrazňuje tvůj text silnějji
-#<br /> vkládá novou řádku (dovnitř br nemůžeš nic dát)
-#<a href="https://djangogirls.org">link</a> vytváří odkaz
-#<ul><li>První položka seznamu</li><li>druhá položka seznamu</li></ul> vytváří seznam, zrovna jako tento!
-#<div></div> definuje sekce stránky
+#Users
 
-<html>
-    <head>
-        <title>Ola's blog</title>
-    </head>
-    <body>
-        <p>Ahoj!</p>
-        <p>Funguje to!</p>
-    </body>
-</html>
+from django.contrib.auth import authenticate, login
 
-<h1>Hlavní nadpis</h1>
-<h2>Pod-nadpis</h2>
-<h3>Pod-pod-nadpis</h3>
-<em>text</em>
-<strong>text</strong>
-<br />
-<a href="https://djangogirls.org">link</a>
-<ul><li> </li><li> </li></ul>
-<div></div>
+def my_view(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        # Redirect to a success page.
+        ...
+    else:
+    # Return an 'invalid login' error message.
+        ...
 
-<html>
-    <head>
-        <title>sykorams-blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Django Mans Blog</a></h1>
-        </div>
 
-        <div>
-            <p>published: Vcera</p>
-            <h2><a href="">Moj prvy príspevok</a></h2>
-            <p>Tak si to tak skusam a skusam....</p>
-        </div>
 
-        <div>
-            <p>published: Dnes</p>
-            <h2><a href="">Moj druhý príspevok</a></h2>
-            <p>A tak si to tu teda skusam dokola, ze by som chytil nejaky zvyk a grif</p>
-        </div>
-    </body>
-</html>
-~/djangogirls/my-first-blog/blog/obrazky/marox.jpg
-~/djangogirls/my-first-blog/blog/obrazky/EXPLOITED-6.jpg
+from django.contrib.auth import logout
 
-me = User.objects.get(username='sykoram')
-Post.objects.create(author=me, title='druhy post', text='Tak si tu tak pisem a pisem... Toto pisem v comand lajne v django sehlly tak som zvedavi')
-Post.objects.create(author=me, title='treti post', text='Ono to fakt fachci aj z comand lajny.')
+def logout_view(request):
+    logout(request)
+    # Redirect to a success page.
